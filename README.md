@@ -29,9 +29,13 @@ Given these facts, why analyze at the county level?  Laziness is one excuse - th
 The top five predictors of electoral outcome are:
 
 ('RHI825214', 'White alone, not Hispanic or Latino, percent, 2014')
+
 ('EDU685213', "Bachelor's degree or higher, percent of persons age 25+, 2009-2013")
+
 ('HSG495213', 'Median value of owner-occupied housing units, 2009-2013')
+
 ('HSD410213', 'Households, 2009-2013')
+
 ('INC110213', 'Median household income, 2009-2013')
 
 None of these are that surprising, given the published analysis.  "Households" is the number of households in a county and correlates strongly with county population.  One interesting twist - while higher median income correlates with greater probability of a Republican victory, higher housing value correlates with a lower probability of Republican victory.

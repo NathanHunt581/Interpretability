@@ -38,7 +38,7 @@ The top five predictors of electoral outcome are:
 
 ('INC110213', 'Median household income, 2009-2013')
 
-None of these are that surprising, given the published analysis.  "Households" is the number of households in a county and correlates strongly with county population.  One interesting twist - while higher median income correlates with greater probability of a Republican victory, higher housing value correlates with a lower probability of Republican victory.
+None of these are that surprising, given what has already been published about this election.  "Households" is the number of households in a county and correlates strongly with county population.  One interesting twist - while higher median income correlates with greater probability of a Republican victory, higher housing value correlates with a lower probability of Republican victory.
 
 
 ## Conclusions - what makes a model interpretable?
@@ -47,7 +47,7 @@ One quick answer would be that models with more degrees of freedom (i.e. more pa
 
 I found simple logistic regression models to be interpretable.  As described in the slides, logistic regression with the best five predictors did nearly as well as a much more complicated LR model picked out with the RFECV method.  Adding three interaction features gave further improvement.
 
-Decision trees gave poorer performance for the same number of parameters.
+Decision trees gave poorer performance than logistic regression with the same number of parameters.
 
 It is true that more complicated models (e.g. random forest) do not completely defy interpretation - one can look at feature importance, for example.  But even if feature importance sheds some light, random forests (or other models with very many parameters such as neural nets) remain relatively opaque.
 

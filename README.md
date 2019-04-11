@@ -45,7 +45,7 @@ None of these are that surprising, given what has already been published about t
 
 One quick answer would be that models with more degrees of freedom (i.e. more parameters) are less interpretable.  However, the concept of "degrees of freedom" becomes harder to nail down when regularization is in the picture (see e.g. https://web.stanford.edu/~hastie/Papers/df_paper_LJrev6.pdf ).  Here, though, I stick pretty much to the concept that lower degrees of freedom (or, more accurately, lower number of parameters, since there is some regularization) gives a more interpretable model.
 
-I found simple logistic regression models to be interpretable.  As described in the slides, logistic regression with the best five predictors did nearly as well as a much more complicated LR model picked out with the RFECV method.  Adding three interaction features gave further improvement.
+I found simple logistic regression models to be interpretable.  As described in the slides, logistic regression with the best five predictors did nearly as well as a much more complicated LR model picked out with the Recursive Feature Elimination - Cross Validation (RFECV) method.  Adding three interaction features gave further improvement.
 
 Decision trees gave poorer performance than logistic regression with the same number of parameters.
 

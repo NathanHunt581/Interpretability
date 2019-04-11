@@ -45,9 +45,21 @@ None of these are that surprising, given the published analysis.  "Households" i
 
 One quick answer would be that models with more degrees of freedom (i.e. more parameters) are less interpretable.  However, the concept of "degrees of freedom" becomes harder to nail down when regularization is in the picture (see e.g. https://web.stanford.edu/~hastie/Papers/df_paper_LJrev6.pdf ).  Here, though, I stick pretty much to the concept that lower degrees of freedom (or, more accurately, lower number of parameters, since there is some regularization) gives a more interpretable model.
 
+I found simple logistic regression models to be interpretable.  As described in the slides, logistic regression with the best five predictors did nearly as well as a much more complicated LR model picked out with the RFECV method.  Adding three interaction features gave further improvement.
 
+Decision trees gave poorer performance for the same number of parameters.
 
-## Methods
+It is true that more complicated models (e.g. random forest) do not completely defy interpretation - one can look at feature importance, for example.  But even if feature importance sheds some light, random forests (or other models with very many parameters such as neural nets) remain relatively opaque.
+
+## Conclusions - clustering of predictors
+
+I clustered the predictors, using the absolute value of the correlation (either Pearson or Spearman) as a similarity measure.  This gives clusters which make some sense.  For example, the strongest set of correlations corresponds to features that scale with county population.  
+
+Using these clusters to pick out features did not perform better than just picking out the best features with Recursive Feature Elimination (RFE).  However, it does provide some insight into the relationships between the features and could be helpful in other cases.
+
+## Further work
+
+It would make sense to repeat this analysis using linear regression as opposed to logistic regression.  I would not expect much difference in feature importance, for example, but if there were significant differences, it would be interesting to understand why.
 
 
 
